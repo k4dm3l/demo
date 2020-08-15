@@ -1,0 +1,57 @@
+{
+  "name": "lean_tech_backend_test",
+  "version": "1.0.0",
+  "description": "Lean Tech test",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cacevede/lean_tech_backend_test.git"
+  },
+  "keywords": [
+    "Lean",
+    "Tech",
+    "-",
+    "test"
+  ],
+  "author": "Camilo Acevedo E.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cacevede/lean_tech_backend_test/issues"
+  },
+  "homepage": "https://github.com/cacevede/lean_tech_backend_test#readme",
+  "dependencies": {
+    "@hapi/boom": "^9.1.0",
+    "@hapi/joi": "^17.1.1",
+    "axios": "^0.19.2",
+    "bcrypt": "^5.0.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "csvtojson": "^2.0.10",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "googleapis": "^52.1.0",
+    "handlebars": "^4.7.6",
+    "helmet": "^3.23.1",
+    "joi-objectid": "^3.0.1",
+    "json2csv": "^5.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.27.0",
+    "mongodb": "^3.5.9",
+    "mongoose": "^5.9.20",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.10",
+    "opn": "^6.0.0",
+    "pg": "^8.2.1",
+    "puppeteer": "^4.0.1",
+    "streamifier": "^0.1.1",
+    "xlsx": "^0.16.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

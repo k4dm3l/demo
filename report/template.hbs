@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+</head>
+<body>
+    <div>
+        <h1>Report per User</h1>
+        <h2>Summary  </h2>
+        {{#if userEmail}}
+            <h4>{{{ userEmail }}}</h4>
+            <h2>Total Generated: {{{ totalGenerated }}}</h2>
+            <h2>Total Pending: {{{ totalPending }}}</h2>
+            <h2>Average: {{{ averageGeneration }}}</h2>
+        {{else}}
+            <ul>
+                {{#each totalGenerated}}
+                    <li>User: {{this._id}} - Count: {{this.count}}</li>
+                {{/each}}
+            </ul>
+            <ul>
+                {{#each totalPending}}
+                    <li>User: {{this._id}} - Count: {{this.count}}</li>
+                {{/each}}
+            </ul>
+            <ul>
+                {{#each averageGeneration}}
+                    <li>User: {{this._id}} - Average: {{this.average}}</li>
+                {{/each}}
+            </ul>
+        {{/if}}
+    </div>
+    <div>
+        <h2>Statistical Data Per Generated Report</h2>
+        <h3>By Month</h3>
+        <table>
+            <tr>
+                <th>Month</th>
+                <th>Count Report Generated</th>
+            </tr>
+            {{#each reportByMonth}}
+                <tr>
+                    <td>{{this._id}}</td>
+                    <td>{{this.count}}</td>
+                </tr>
+            {{/each}}
+        </table>
+        <br/>
+        <h3>By Week</h3>
+        <table>
+            <tr>
+                <th>Week</th>
+                <th>Count Report Generated</th>
+            </tr>
+            {{#each reportByWeek}}
+                <tr>
+                    <td>{{this._id}}</td>
+                    <td>{{this.count}}</td>
+                </tr>
+            {{/each}}
+        </table>
+        <br/>
+        <h3>Report List</h3>
+        <table>
+            <tr>
+                <th></th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Status</th>
+                <th>Link</th>
+            </tr>
+            {{#each reportsByUser}}
+                <tr>
+                    <td>{{@index}}</td>
+                    <td>{{this.startDate}}</td>
+                    <td>{{this.endDate}}</td>
+                    <td>{{this.status}}</td>
+                    <td><a href={{this.link}}>Download</a></td>
+                </tr>
+            {{/each}}
+        </table>
+    </div>
+</body>
+</html>
